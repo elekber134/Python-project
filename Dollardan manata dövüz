@@ -1,0 +1,13 @@
+while True:
+    sual = input("Bu doları manata, manatı dolara çevirən programdır: dollardan manata & manatdan dollara:   ")
+
+    if sual == "dollardan manata":
+        a = float(input("Neçə dollar? :  "))
+        a1 = a*1.7
+        print(a1,"manat")
+    elif sual =="manatdan dollara":
+        b = float(input("Neçə manat:  "))
+        b1 = b/1.7
+        print(b1,"dollar")
+    else:
+        print("Zəhmət olmasa düzgün yazin")
