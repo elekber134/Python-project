@@ -1,0 +1,13 @@
+while True:
+    sual = input("Dərəcəni seç:  C & F :  ")
+
+    if sual =="C":
+        a = float(input("Dərəcə ölçüsunu yaz: "))
+        a1 = 1.8 * a +32
+        print("Dərəcə: " , a1)
+    elif sual =="F":
+        b = float(input("Dərəcə ölçüsünü yaz: "))
+        b1=5/9 * (b - 32)
+        print(b1)
+    else:
+        print("Zəhmət olmasa düzgün dərəcə seçin")
