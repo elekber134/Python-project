@@ -1,0 +1,78 @@
+import webbrowser
+import pyautogui
+
+print("")
+print("       db         888888888888  88888888888  88888888ba      ad8888ba     88888888ba   ")
+print("      d88b                 88   88           88       8b   d8        8b   88       8b  ")
+print("    d8    8b            88      888888888    88aaaaaa8P   88          88  88aaaaaa8P  ")
+print("   d8      Y8         88        888888888    88888888     88          88  888888888b  ")
+print("  d8888888888b      88          88           88     8b    Y8          8P  88       8b  ")
+print(" d8          8b   88            88           88      8b    Y8a      a8P   88      a8P  ")
+print("d8            8b  888888888888  88888888888  88       8b      Y8888Y      88888888P")
+print("")
+
+print("AZEROB: Salam ")
+
+def open_app_or_website():
+    print("Burdan qısayollara baxa bilərsiniz")
+    print("")
+    print("İstədiyin əmri seç")
+    print("")
+    print("                     1-Google ")
+    print("                     2-Youtube")
+    print("                     3-Notion")
+    print("                     4-Github")
+    print("                     5-Pexels")
+    print("                     6-Masaüstü")
+    print("                     7-Minecraft")
+    print("                     8-ChatGPT")
+    print("                     9-Çıxış ")
+
+    print("")
+    x2 = input("Cavabınız: ")
+
+    if x2 == "1":
+        print("Google açıldı")
+        url = "https://www.google.com/"
+        webbrowser.open(url)
+    elif x2 == "2":
+        print("Youtube açıldı")
+        url = "https://www.youtube.com/"
+        webbrowser.open(url)
+    elif x2 == "3":
+        print("Notion açıldı")
+        url = "https://www.notion.so/"
+        webbrowser.open(url)
+    elif x2 == "4":
+        print("Github açıldı")
+        url = "https://github.com/"
+        webbrowser.open(url)
+    elif x2 == "5":
+        print("Pexels açıldı")
+        url = "https://pexels.com/"
+        webbrowser.open(url)
+    elif x2 == "6":
+        print("Masaüstü gösterildi")
+        pyautogui.keyDown('win')  
+        pyautogui.press('d')
+        pyautogui.keyUp('win')
+    elif x2 == "7":
+        print("Minecraft açıldı")
+        pyautogui.press('win')
+        pyautogui.write('Tlauncher')
+        pyautogui.press('enter')
+    elif x2 == "8":
+        print("ChatGPT açıldı")
+        url = "https://chatgpt.com/?model=auto"
+        webbrowser.open(url)
+    elif x2 == "9":
+        return False
+    else:
+        print("Yanlış seçim etdiniz, yeniden cəhd edin.")
+    return True
+
+while True:
+    if not open_app_or_website():
+        break
+
+print("Proqramdan çıxış edilir...")
