@@ -1,0 +1,142 @@
+import tkinter as tk
+from tkinter import Label
+import time
+import webbrowser
+import pyautogui
+import os
+
+
+def update_time():
+    current_time = time.strftime('%H:%M:%S:%B:%d')
+    clock_label.config(text=current_time)
+    root.after(1000, update_time)
+    
+
+root = tk.Tk()
+root.title("Asistan")
+root.geometry("350x900")
+root.geometry('+1014+00')
+root.configure(bg='white')
+
+
+
+
+def google():
+    url = "https://www.google.com/"
+    webbrowser.open(url)
+
+def youtube():
+    url = "https://www.youtube.com/"
+    webbrowser.open(url)
+
+
+def notion():
+    url = "https://www.notion.so/"
+    webbrowser.open(url)
+
+
+def Github():
+    url = "https://github.com/"
+    webbrowser.open(url)
+
+
+def pexels():
+    url = "https://pexels.com/"
+    webbrowser.open(url)
+
+
+def masaustu():
+    pyautogui.keyDown('win')  
+    pyautogui.press('d')
+    pyautogui.keyUp('win')
+
+
+def minecraft():
+    pyautogui.press('win')
+    pyautogui.write('Tlauncher')
+    pyautogui.press('enter')
+
+
+def chatgpt():
+    url = "https://chatgpt.com/?model=auto"
+    webbrowser.open(url)
+
+
+def instagram():
+    url = "https://www.instagram.com/"
+    webbrowser.open(url)
+
+
+def canva():
+    pyautogui.press('win')
+    pyautogui.write('Canva')
+    pyautogui.press('enter')
+
+
+def akinator():
+    url = "https://tr.akinator.com/"
+    webbrowser.open(url)
+
+def kompbagla():
+    os.system("shutdown /s /t 1")
+
+
+def themedark():
+    root.configure(bg='black')
+
+def themeag():
+    root.configure(bg='white')
+    
+
+
+button_google = tk.Button(root, text='Google Chrome', width=15, height=1,command=google)
+button_google.place(x=10, y=80)
+
+button_youtube = tk.Button(root, text='Youtube', width=15, height=1,command=youtube)
+button_youtube.place(x=10, y=120)
+
+button_notion = tk.Button(root, text='Notion', width=15, height=1,command=notion)
+button_notion.place(x=10, y=160)
+
+button_github = tk.Button(root, text='Github', width=15, height=1,command=Github)
+button_github.place(x=10, y=200)
+
+button_pexels = tk.Button(root, text='Pexels', width=15, height=1,command=pexels)
+button_pexels.place(x=10, y=240)
+
+button_masaustu = tk.Button(root, text='Masaüstü', width=15, height=1,command=masaustu)
+button_masaustu.place(x=10, y=280)
+
+button_minecraft = tk.Button(root, text='Minecraft', width=15, height=1,command=minecraft)
+button_minecraft.place(x=170, y=80)  
+
+button_chatgpt = tk.Button(root, text='ChatGPT', width=15, height=1,command=chatgpt)
+button_chatgpt.place(x=170, y=120) 
+
+button_instagram = tk.Button(root, text='Instagram', width=15, height=1,command=instagram)
+button_instagram.place(x=170, y=160) 
+
+button_canva = tk.Button(root, text='Canva', width=15, height=1,command=canva)
+button_canva.place(x=170, y=200) 
+
+button_akinator = tk.Button(root, text='Akinator', width=15, height=1,command=akinator)
+button_akinator.place(x=170, y=240)
+
+button_cikis = tk.Button(root, text='Çıkış', width=15, height=1,command=root.quit)
+button_cikis.place(x=170, y=280)
+
+buton_komp = tk.Button(root, text='Kompüteri Bağla', width=15, height=2,command=kompbagla)
+buton_komp.place(x=120, y=560)
+
+buton_renk1 = tk.Button(root, text='Qara', width=5, height=2,command=themedark)
+buton_renk1.place(x=120, y=620)
+
+buton_renk2 = tk.Button(root, text='Ağ', width=5, height=2,command=themeag)
+buton_renk2.place(x=190, y=620)
+
+clock_label = Label(root, font=('Calibro', 13, 'bold'), background='white', foreground='black')
+clock_label.place(x=85, y=20)
+
+
+update_time()
+root.mainloop()
